@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+	<link rel="icon" type="image/png" href="css/sign/sign-yellow.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="content" id="result-list">
+		<div class="content-inner">
+			<p class="continent-quiz">Continent quiz</p>
+			<p class="title">Your Scores</p>
+			<div class="score-row" style="padding-top: 30px;">
+				<div class="score-place">
+					<p class="place">#1</p>
+				</div>
+				<div class="score-points">
+					<p class="score-date">On <span id="scoreDate1">08/16/2019</span></p>
+					<p class="points"><span id="pointsPlace1">2,300</span> pts</p>
+				</div>
+			</div>
+			<div class="score-row">
+				<div class="score-place">
+					<p class="place">#2</p>
+				</div>
+				<div class="score-points">
+					<p class="score-date">On <span id="scoreDate2">08/16/2019</span></p>
+					<p class="points"><span id="pointsPlace2">1,900</span> pts</p>
+				</div>
+			</div>
+			<div class="score-row">
+				<div class="score-place">
+					<p class="place">#3</p>
+				</div>
+				<div class="score-points">
+					<p class="score-date">On <span id="scoreDate3">08/16/2019</span></p>
+					<p class="points"><span id="pointsPlace3">900</span> pts</p>
+				</div>
+			</div>
+			<div class="new">
+				<p class="home"><i class="material-icons ">home</i></p>
+				<div class="new-game" onclick="newGame()">
+					<img src="css/sign/sign-green.png" class="sign" />
+					<p style="  padding-left: 40px;">Play</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+    <div class="content" id="main-quiz">
+        <div class="content-inner">
+            <p class="continent-quiz">Continent quiz</p>
+            <p class="title" onclick="scoreSort()">Question <span id="question-number"> 1 </span> of 5</p>
+            <img src="" alt="" class="test-jpg" style="" id="continent-img">
+			
+			<div class="answer" onclick=answer(1) id="answer1">
+				<img src= 'css/sign/sign-yellow.png' class="sign" id="sign1">
+				<p class="continent-answer" id="continent-name1">Africa</p>
+				<img src= 'css/sign/yes.png' class="answer-sign" id="yes1">
+				<img src= 'css/sign/no.png' class="answer-sign" id="no1">
+			</div>
+
+            <div class="answer" onclick=answer(2) id="answer2">
+                <img src= 'css/sign/sign-yellow.png' class="sign" id="sign2">
+                <p class="continent-answer" id="continent-name2">South America</p>
+				<img src= 'css/sign/yes.png' class="answer-sign" id="yes2">
+				<img src= 'css/sign/no.png' class="answer-sign" id="no2">
+            </div>
+
+            <div class="answer" onclick=answer(3) id="answer3">
+                <img src= 'css/sign/sign-yellow.png' class="sign" id="sign3">
+                <p class="continent-answer" id="continent-name3">Australia</p>
+				<img src= 'css/sign/yes.png' class="answer-sign" id="yes3">
+				<img src= 'css/sign/no.png' class="answer-sign" id="no3">
+            </div>
+		</div>
+		<div class="next" onclick=nextQuestion() id="next">
+			<p>NEXT</p>
+		</div>
+	</div>
+	
+	<div class="content" id="finish">
+		<div class="content-inner">
+			<p class="continent-quiz">Continent quiz</p>
+			<p class="title">Results</p>
+			<p class="center" style="margin-left: -24px;">
+				<img src="css/sign/sign-blue.png" style="width: 130px; margin: 0 auto; padding-top: 50px;"/>
+			</p>
+			<p class="your-score" class="center">Your Score</p>
+			<p class="your-score-points" class="center"><span id="total-score">2,500</span> pts</p>
+			<div style="padding-top: 50px; margin-left: -24px; cursor: pointer;" align="center" onclick="finish()">
+				<div class="finish" >
+					<p class="continent-answer" style="padding-left: 0px; color: #0050a5;">Finish</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
